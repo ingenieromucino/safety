@@ -1,0 +1,27 @@
+﻿@using Safety.Web.Models.ViewModels.Configuracion
+@model TipoProductoVM
+
+<h2>Crear Tipo Producto</h2>
+
+<form asp-action="Crear">
+    <div class="form-group">
+        <label asp-for="Nombre"></label>
+        <input asp-for="Nombre" class="form-control" />
+        <span asp-validation-for="Nombre" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Descripcion"></label>
+        <textarea asp-for="Descripcion" class="form-control"></textarea>
+    </div>
+
+    <br />
+
+    <button type="submit" class="btn btn-success">
+        Guardar
+    </button>
+
+    <a asp-action="Index" class="btn btn-secondary">
+        Cancelar
+    </a>
+</form>

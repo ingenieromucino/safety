@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Safety.Web.Entities.Catalogos;
+using Safety.Web.Models.Entities.Configuraciones;
 using System;
 
 namespace Safety.Web.Data;

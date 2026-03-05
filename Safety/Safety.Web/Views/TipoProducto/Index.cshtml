@@ -1,0 +1,44 @@
+﻿@using Safety.Web.Models.ViewModels.Configuracion
+@model IEnumerable<TipoProductoVM>
+
+<h2>Tipos de Producto</h2>
+
+<p>
+    <a asp-action="Crear" class="btn btn-primary">
+        Nuevo Tipo
+    </a>
+</p>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Nombre</td>
+                <td>@item.Descripcion</td>
+                <td>
+                    <a asp-action="Editar" asp-route-id="@item.Id">
+                        Editar
+                    </a>
+
+                    <form asp-action="Eliminar"
+                          asp-route-id="@item.Id"
+                          method="post"
+                          style="display:inline;">
+                        <button type="submit"
+                                onclick="return confirm('¿Desactivar tipo?');">
+                            Desactivar
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

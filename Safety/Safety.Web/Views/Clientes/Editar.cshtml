@@ -1,0 +1,63 @@
+﻿@model Safety.Web.Models.Entities.Clientes.Cliente
+
+@{
+    ViewData["Title"] = "Editar Cliente";
+}
+
+<h1 class="mb-4">Editar Cliente</h1>
+
+<form asp-action="Editar" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <!-- Mismos campos floating que Crear.cshtml -->
+    <div class="form-floating mb-3">
+        <input asp-for="NombreCliente" class="form-control" placeholder="Nombre Cliente">
+        <label asp-for="NombreCliente">Nombre Cliente</label>
+        <span asp-validation-for="NombreCliente" class="text-danger"></span>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input asp-for="NombreComercial" class="form-control" placeholder="Nombre Comercial">
+        <label asp-for="NombreComercial">Nombre Comercial</label>
+        <span asp-validation-for="NombreComercial" class="text-danger"></span>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input asp-for="RFC" class="form-control" placeholder="RFC">
+        <label asp-for="RFC">RFC</label>
+        <span asp-validation-for="RFC" class="text-danger"></span>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input asp-for="Direccion" class="form-control" placeholder="Dirección">
+        <label asp-for="Direccion">Dirección</label>
+        <span asp-validation-for="Direccion" class="text-danger"></span>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input asp-for="Telefono" class="form-control" placeholder="Teléfono">
+        <label asp-for="Telefono">Teléfono</label>
+        <span asp-validation-for="Telefono" class="text-danger"></span>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input asp-for="Email" type="email" class="form-control" placeholder="Email">
+        <label asp-for="Email">Email</label>
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input asp-for="Estado" class="form-control" placeholder="Estado">
+        <label asp-for="Estado">Estado</label>
+        <span asp-validation-for="Estado" class="text-danger"></span>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input asp-for="Municipio" class="form-control" placeholder="Municipio">
+        <label asp-for="Municipio">Municipio</label>
+        <span asp-validation-for="Municipio" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Actualizar</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

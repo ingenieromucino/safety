@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Safety.Web.Models.Entities.Clientes.Cliente>
+
+@{
+    ViewData["Title"] = "Clientes";
+}
+
+<h1 class="mb-4">Clientes</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Crear">Nuevo Cliente</a>
+</p>
+
+<table class="table table-striped table-hover">
+    <thead class="table-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Nombre Comercial</th>
+            <th>RFC</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+            <th>Email</th>
+            <th>Estado</th>
+            <th>Municipio</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cliente in Model)
+        {
+            <tr>
+                <td>@cliente.NombreCliente</td>
+                <td>@cliente.NombreComercial</td>
+                <td>@cliente.RFC</td>
+                <td>@cliente.Direccion</td>
+                <td>@cliente.Telefono</td>
+                <td>@cliente.Email</td>
+                <td>@cliente.Estado</td>
+                <td>@cliente.Municipio</td>
+                <td>
+                    <a class="btn btn-sm btn-warning" asp-action="Editar" asp-route-id="@cliente.Id">Editar</a>
+                    <a class="btn btn-sm btn-danger" asp-action="Eliminar" asp-route-id="@cliente.Id">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

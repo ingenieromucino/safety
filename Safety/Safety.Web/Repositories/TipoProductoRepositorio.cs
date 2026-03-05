@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Safety.Web.Data;
-using Safety.Web.Entities.Catalogos;
+using Safety.Web.Models.Entities.Configuraciones;
 
 namespace Safety.Web.Repositories.Catalogos;
 

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Safety.Web.ViewModels.Configuracion;
+namespace Safety.Web.Models.ViewModels.Configuracion;
 
 public class TipoProductoVM
 {

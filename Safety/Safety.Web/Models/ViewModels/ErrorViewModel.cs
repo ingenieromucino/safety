@@ -1,4 +1,4 @@
-namespace Safety.Web.Models
+namespace Safety.Web.Models.ViewModels
 {
     public class ErrorViewModel
     {

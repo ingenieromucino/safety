@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <Folder Include="Middleweare\" />
+    <Folder Include="Models\Entities\Catalogos\" />
+    <Folder Include="Models\Entities\Inventario\" />
     <Folder Include="Services\" />
   </ItemGroup>
 

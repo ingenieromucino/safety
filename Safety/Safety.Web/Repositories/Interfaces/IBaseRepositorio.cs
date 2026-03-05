@@ -1,4 +1,4 @@
-﻿using Safety.Web.Entities.Commons;
+﻿using Safety.Web.Models.Commons;
 
 namespace Safety.Web.Repositories.Interfaces
 {
@@ -6,7 +6,6 @@ namespace Safety.Web.Repositories.Interfaces
     {
         Task<IEnumerable<T>> ObtenerTodosAsync(bool soloActivos = true);
         Task<T?> ObtenerPorIdAsync(int id);
-
         Task<int> AgregarAsync(T entidad);
         Task<int> ActualizarAsync(T entidad);
         Task<int> EliminarAsync(T entidad); 

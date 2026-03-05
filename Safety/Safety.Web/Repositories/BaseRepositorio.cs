@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Safety.Web.Data;
-using Safety.Web.Entities.Commons;
+using Safety.Web.Models.Commons;
 using Safety.Web.Repositories.Interfaces;
 
 public class BaseRepositorio<T> : IBaseRepositorio<T> where T : EntidadBase
@@ -13,17 +13,12 @@ public class BaseRepositorio<T> : IBaseRepositorio<T> where T : EntidadBase
         _context = context;
         _dbSet = context.Set<T>();
     }
-
     public async Task<IEnumerable<T>> ObtenerTodosAsync(bool soloActivos = true)
-    {
-        if (soloActivos)
-            return await _dbSet.Where(x => x.Activo).ToListAsync();
-
-        return await _dbSet.ToListAsync();
-    }
+       => soloActivos ? await _dbSet.Where(x => x.Activo).ToListAsync() : await _dbSet.ToListAsync();
 
     public async Task<T?> ObtenerPorIdAsync(int id)
-        => await _dbSet.FirstOrDefaultAsync(x => x.Id == id && x.Activo);
+        => await _dbSet.FirstOrDefaultAsync(x => x.Id == id);
+    
 
     public async Task<int> AgregarAsync(T entidad)
     {

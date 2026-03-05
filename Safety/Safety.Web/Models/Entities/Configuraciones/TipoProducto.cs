@@ -1,6 +1,6 @@
-﻿using Safety.Web.Entities.Commons;
+﻿using Safety.Web.Models.Commons;
 
-namespace Safety.Web.Entities.Catalogos;
+namespace Safety.Web.Models.Entities.Configuraciones;
 
 public class TipoProducto : EntidadBase
 {
