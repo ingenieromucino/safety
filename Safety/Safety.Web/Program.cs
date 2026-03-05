@@ -1,6 +1,23 @@
+using Microsoft.EntityFrameworkCore;
+using Safety.Web.Data;
+using Safety.Web.Repositories.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
+
 builder.Services.AddControllersWithViews();
+
+
+// AppDbContext
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+// Repositorios
+builder.Services.AddScoped<IClienteRepositorio, ClienteRepositorio>();
+
+// Servicios
+
+
 
 var app = builder.Build();
 

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Safety.Web.Models.Entities.Clientes;
 using Safety.Web.Models.Entities.Configuraciones;
 using System;
 
@@ -12,5 +13,8 @@ public class AppDbContext : DbContext
     }
 
     public DbSet<TipoProducto> TipoProductos => Set<TipoProducto>();
+
+    public DbSet<Cliente> Clientes => Set<Cliente>();
+
 
 }

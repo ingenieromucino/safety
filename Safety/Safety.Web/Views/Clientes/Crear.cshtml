@@ -6,51 +6,52 @@
 
 <h1 class="mb-4">Crear Cliente</h1>
 
+
 <form asp-action="Crear" method="post">
     <div class="form-floating mb-3">
-        <input asp-for="NombreCliente" class="form-control" placeholder="Nombre Cliente">
+        <input asp-for="NombreCliente" class="form-control" placeholder="Nombre Cliente" maxlength="200">
         <label asp-for="NombreCliente">Nombre Cliente</label>
         <span asp-validation-for="NombreCliente" class="text-danger"></span>
     </div>
 
     <div class="form-floating mb-3">
-        <input asp-for="NombreComercial" class="form-control" placeholder="Nombre Comercial">
+        <input asp-for="NombreComercial" class="form-control" placeholder="Nombre Comercial" maxlength="200">
         <label asp-for="NombreComercial">Nombre Comercial</label>
         <span asp-validation-for="NombreComercial" class="text-danger"></span>
     </div>
 
     <div class="form-floating mb-3">
-        <input asp-for="RFC" class="form-control" placeholder="RFC">
+        <input asp-for="RFC" class="form-control" placeholder="RFC" maxlength="20">
         <label asp-for="RFC">RFC</label>
         <span asp-validation-for="RFC" class="text-danger"></span>
     </div>
 
     <div class="form-floating mb-3">
-        <input asp-for="Direccion" class="form-control" placeholder="Dirección">
+        <input asp-for="Direccion" class="form-control" placeholder="Dirección" maxlength="300">
         <label asp-for="Direccion">Dirección</label>
         <span asp-validation-for="Direccion" class="text-danger"></span>
     </div>
 
     <div class="form-floating mb-3">
-        <input asp-for="Telefono" class="form-control" placeholder="Teléfono">
+        <input asp-for="Telefono" class="form-control" placeholder="Teléfono" maxlength="50">
         <label asp-for="Telefono">Teléfono</label>
         <span asp-validation-for="Telefono" class="text-danger"></span>
     </div>
 
     <div class="form-floating mb-3">
-        <input asp-for="Email" type="email" class="form-control" placeholder="Email">
+        <input asp-for="Email" type="email" class="form-control" placeholder="Email" maxlength="100">
         <label asp-for="Email">Email</label>
         <span asp-validation-for="Email" class="text-danger"></span>
     </div>
 
     <div class="form-floating mb-3">
-        <input asp-for="Estado" class="form-control" placeholder="Estado">
+        <input asp-for="Estado" class="form-control" placeholder="Estado" maxlength="100">
         <label asp-for="Estado">Estado</label>
         <span asp-validation-for="Estado" class="text-danger"></span>
     </div>
 
     <div class="form-floating mb-3">
-        <input asp-for="Municipio" class="form-control" placeholder="Municipio">
+        <input asp-for="Municipio" class="form-control" placeholder="Municipio" maxlength="100">
         <label asp-for="Municipio">Municipio</label>
         <span asp-validation-for="Municipio" class="text-danger"></span>
     </div>
